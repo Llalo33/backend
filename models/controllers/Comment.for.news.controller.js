@@ -19,7 +19,7 @@ const commentsControlles = {
     },
     getAllCommentsSpecificNews: async (req, res) => {
         try {
-            const comment = await Comments.find({newsId: req.params.id})
+            const comment = await Comments.findById({newsId: req.params.id})
             res,json(comment)
         } catch (error) {
             res.json(error)
