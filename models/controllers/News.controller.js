@@ -44,7 +44,7 @@ const newsControlls = {
     },
     getSpecificNews: async (req, res) => {
         try {
-            const news = await News.find(req.params.id)
+            const news = await News.findById(req.params.id)
             res.json(news)
         } catch (error) {
             res,json(error)
@@ -52,7 +52,7 @@ const newsControlls = {
     },
     getAllNewsFromTheCategory: async (req, res) => {
         try {
-            const news = await News.find({categoryId: req.params.id})
+            const news = await News.findById({categoryId: req.params.id})
             res.json(news)
         } catch (error) {
             res.json(news)
