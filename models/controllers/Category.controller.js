@@ -21,7 +21,7 @@ const categoryControlles = {
     },
     getCategory: async (req, res) => {
         try {
-            const category = await Category.find()
+            const category = await Category.findById()
             res.json(category)
         } catch (error) {
             res.json(error)
