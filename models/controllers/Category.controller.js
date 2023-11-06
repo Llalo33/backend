@@ -13,7 +13,7 @@ const categoryControlles = {
     },
     deleteCategory: async (req, res) => {
         try {
-            const category = await Category.findByIdAndDelete(req.params.id)
+            const category = await Category.findByIdAndRemove(req.params.id)
             res.json(category)
         } catch (error) {
             res.json(error)
